@@ -12,10 +12,10 @@ public class LoginServiceSesionImplement implements LoginService {
         //Obtengo la secion
         HttpSession session = request.getSession();
         //Convertimos el objeto de tipo session a String
-        String username = (String) session.getAttribute("username");
+        String username = (String)session.getAttribute("username");
 
         /*
-        * implemento una condicional en la cual valido
+        * Implemento una condicional en la cual valido
         * si al obtener el username es distinto de nulo
         * caso contrario devuelvo la sesion vacia*/
         if (username != null) {

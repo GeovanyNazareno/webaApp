@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
                 out.println("<html>");
                 out.println("<head>");
                 out.println("<meta charset=utf-8>");
-                out.println("<title>Hola"+userNameOptional.get() +"</title>");
+                out.println("<title>Hola "+userNameOptional.get() +"</title>");
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<h1>Hola"+userNameOptional.get()+" ya iniciaste secion anteriormente!</h1>");

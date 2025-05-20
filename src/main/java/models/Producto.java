@@ -1,12 +1,12 @@
 package models;
 
 public class Producto {
-
+    //Declaramos variables para crear el objeto productos
     private  Long id;
     private String nombre;
     private String tipo;
     private Double precio;
-
+    //implementamos el constructor vacio
     public Producto() {
     }
 

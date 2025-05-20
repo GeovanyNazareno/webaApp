@@ -18,7 +18,7 @@ public class Logout extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Creamos e implementamos el Objeto sesion
         LoginService auth = new LoginServiceSesionImplement();
-        Optional<String> usernameOptional = auth.getUserName();
+        Optional<String> usernameOptional = auth.getUserName(req);
         //una condicional para saber si la sesion esta presente
         if (usernameOptional.isPresent()) {
             HttpSession session = req.getSession();
