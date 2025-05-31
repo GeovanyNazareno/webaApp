@@ -1,4 +1,4 @@
-package models;
+package org.angelo.webappcookie.models;
 
 public class Producto {
     //Declaramos variables para crear el objeto productos

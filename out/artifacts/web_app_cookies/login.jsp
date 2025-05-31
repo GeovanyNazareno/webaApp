@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Geovanny Nazareno
-  Date: 15/5/2025
-  Time: 21:41
+  User: HP
+  Date: 30/5/2025
+  Time: 14:12
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
@@ -10,11 +10,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
 
-<h1>Login de usuario</h1>
+
 <div>
+    <h1>Login de usuario</h1>
     <form action="/web_app_cookies/login" method="post">
         <div>
             <lable for="username">Nombre de usuarios:</lable>
@@ -37,3 +39,4 @@
 
 </body>
 </html>
+

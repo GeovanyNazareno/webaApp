@@ -1,4 +1,4 @@
-package services;
+package org.angelo.webappcookie.services;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

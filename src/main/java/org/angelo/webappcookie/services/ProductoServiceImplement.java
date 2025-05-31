@@ -1,8 +1,7 @@
-package services;
+package org.angelo.webappcookie.services;
 
-import models.Producto;
+import org.angelo.webappcookie.models.Producto;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

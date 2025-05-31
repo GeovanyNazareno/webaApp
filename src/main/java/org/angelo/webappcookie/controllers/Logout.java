@@ -1,4 +1,4 @@
-package controllers;
+package org.angelo.webappcookie.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -6,8 +6,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import services.LoginService;
-import services.LoginServiceSesionImplement;
+import org.angelo.webappcookie.services.LoginService;
+import org.angelo.webappcookie.services.LoginServiceSesionImplement;
 
 import java.io.IOException;
 import java.util.Optional;
