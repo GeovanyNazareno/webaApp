@@ -23,7 +23,6 @@ public class Categoria {
 
     //Implementamos los metodos get and set
 
-
     public Long getIdCategoria() {
 
         return idCategoria;

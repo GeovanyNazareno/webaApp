@@ -5,7 +5,8 @@
   Time: 20:19
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*, org.angelo.webappcookie.models.Categoria" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         import="java.util.*, org.angelo.webappcookie.models.Categoria" %>
 <%
     List<Categoria> categorias = (List<Categoria>) request.getAttribute("categoria");
     Optional<String> username = (Optional<String>) request.getAttribute("userName");
@@ -16,6 +17,8 @@
     <link rel="stylesheet" href="CSS/producto.css">
 </head>
 <body>
+
+<h1>Listado Categoria</h1>
 <%
     if(username.isPresent()){
 %>
@@ -24,12 +27,6 @@
 <%
     }
 %>
-
-<h1>Listado Categoria</h1>
-<%
-    if (username.isPresent()){%>
-<div style="color: blue">Hola, <%=username.get()%> bienvenido</div>
-<%}%>
 
 <table>
     <thead>
@@ -47,7 +44,7 @@
     <td><%=cate.getDescripcion()%></td>
     <td><%=cate.getCondicion()%></td>
     <td>
-        <a href="">Editar</a>
+        <a href="<%=request.getContextPath()%>/categoria/form?id=<%=cate.getIdCategoria()%>">Editar</a>
         <a href="">Eliminar</a>
     </td>
     </tbody>

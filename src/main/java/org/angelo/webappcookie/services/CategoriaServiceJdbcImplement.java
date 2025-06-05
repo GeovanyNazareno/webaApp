@@ -1,7 +1,7 @@
 package org.angelo.webappcookie.services;
 
 import org.angelo.webappcookie.models.Categoria;
-import org.angelo.webappcookie.repository.CategoriaRepositoryJdbcImplement;
+import org.angelo.webappcookie.repository.CategoriaRepositoryJdbcImplemt;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -10,11 +10,20 @@ import java.util.Optional;
 
 public class CategoriaServiceJdbcImplement implements CategoriaService {
 
-    private final CategoriaRepositoryJdbcImplement repositoryJdbc;
-    private CategoriaRepositoryJdbcImplement repositoryJdbcImplement;
+    private CategoriaRepositoryJdbcImplemt repositoryJdbc;
     //Implementamos el constructor para octener la conexion y los metodos del CRUD
     public CategoriaServiceJdbcImplement(Connection conn) {
-        this.repositoryJdbc= new CategoriaRepositoryJdbcImplement(conn) {
+        this.repositoryJdbc= new CategoriaRepositoryJdbcImplemt(conn) {
+            @Override
+            public Categoria porID(long id) throws SQLException {
+                return null;
+            }
+
+            @Override
+            public void eliminar(long id) throws SQLException {
+
+            }
+
             @Override
             public void activar(long id) throws SQLException {
 

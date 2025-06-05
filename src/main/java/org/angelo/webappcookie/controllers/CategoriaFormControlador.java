@@ -23,7 +23,7 @@ public class CategoriaFormControlador extends HttpServlet {
         Connection conn = (Connection)  req.getAttribute("conn");
         CategoriaService service = new CategoriaServiceJdbcImplement(conn);
         Long id;
-        //Vañadimos que el campo ingresado sea un número
+        //Valadimos que el campo ingresado sea un número
         try {
             //En la variable id guardamos la que estamos mapeando por e metodo get idCatrgoria
             id=Long.parseLong(req.getParameter("idCategoria"));
@@ -53,9 +53,9 @@ public class CategoriaFormControlador extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Connection conn = (Connection)  req.getAttribute("conn");
         CategoriaService service = new CategoriaServiceJdbcImplement(conn);
-                String nombre = req.getParameter("nombre");
-                String descripcion = req.getParameter("descripcion");
-                //Obtenemos el idCategoria
+        String nombre = req.getParameter("nombre");
+        String descripcion = req.getParameter("descripcion");
+        //Obtenemos el idCategoria
         Long idCategoria;
         try{
             idCategoria = Long.parseLong(req.getParameter("idCategoria"));

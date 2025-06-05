@@ -10,34 +10,38 @@
 <%
     Categoria categorias = (Categoria) request.getAttribute("categorias");
 %>
+
 <html>
 <head>
-    <title>Formulario Categoría</title>
-    <link rel="stylesheet" href="CSS/login.css">
+    <title>Formulario Categoria</title>
 </head>
 <body>
-<h1>Formulario Categoría</h1>
+<h1>Formulario Categoria</h1>
 <div>
     <form action="<%=request.getContextPath()%>/categoria/form" method="post">
         <div>
-            <label for="nombre">Ingresa el nombre de categoría</label>
+            <label for="nombre">Ingrese el nombre de categoria</label>
             <div>
-                <input type="hidden" name="idCategoria" value="<%=categorias.getIdCategoria()%>">
-                <input type="text" id="nombre" name="nombre" value="<%=categorias.getNombre() != null ? categorias.getNombre() : ""%>">
+                <input type="hidden" name="id" value="<%=categorias.getIdCategoria()%>">
+                <input type="text" id="nombre" name="nombre" value="<%=categorias.getNombre() != null ? categorias.getNombre():""%>">
             </div>
         </div>
 
         <div>
-            <label for="descripcion">Ingresa la descripción</label>
+            <label for="descripcion">Ingrese la descripción</label>
             <div>
-                <input type="text" id="descripcion" name="descripcion" value="<%=categorias.getDescripcion() != null ? categorias.getDescripcion() : ""%>">
+                <input type="text" id="descripcion" name="descripcion" value="<%=categorias.getDescripcion() !=null ? categorias.getDescripcion():""%>">
             </div>
         </div>
 
+
+
         <div>
-            <input type="submit" value="ENVIAR">
+            <input type="submit" value="<%=(categorias.getIdCategoria()!= null && categorias.getIdCategoria()>0) ? "Editar" : "Crear"%>" >
+
         </div>
     </form>
 </div>
+
 </body>
 </html>

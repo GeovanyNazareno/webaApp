@@ -18,9 +18,7 @@ import java.util.Optional;
 
 @WebServlet("/categorias")
 public class CategoriaServlet extends HttpServlet {
-
     //Creamos la noexion a la BBDD
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Creamos la conexion
